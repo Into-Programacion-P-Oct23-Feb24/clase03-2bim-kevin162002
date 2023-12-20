@@ -28,16 +28,15 @@ public class Ejemplo022 {
         System.out.printf("Valor en la posición [0][2]\n", arreglo1[0][2]);
        
         arreglo1[0][2] = 1000;
-        if (valor >= 10){
-            System.out.printf("%d",valor); 
         
         for (int f = 0; f < arreglo1.length; f++) {
             for (int c = 0; c < arreglo1[f].length; c++) {
                 System.out.printf("Inegrese numero para posicion [%d][%d]"
                         ,f,c);
                 valor = entrada.nextInt();
-                arreglo1[f][c] = valor;
-                
+                if ((valor % 2 == 0) && (valor >= 0)){
+                arreglo1[f][c] = 0;
+                 System.out.printf("%d",valor); 
                     
                 }
             }
